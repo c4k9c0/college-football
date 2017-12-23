@@ -1,5 +1,8 @@
-<div class="col-sm-8 col-sm-offset-2" style="border: 1px solid red;">
-  <div *ngFor="let game of games">
-    <game [game]="game"></game>
+<div class="panel panel-default">
+  <div class="panel-heading">Make Picks</div>
+  <div class="panel-body">
+    <div *ngFor="let game of games">
+      <game [game]="game"></game>
+    </div>
   </div>
 </div>

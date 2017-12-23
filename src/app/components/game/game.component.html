@@ -1,4 +1,11 @@
-<p>
-  <team [team]="game.home"></team>V.
-  <team [team]="game.away"></team>
-</p>
+<div>
+  <div class="col-md-5" style="border: 1px solid red;">
+    <team [team]="game.home"></team>
+  </div>
+  <div class="col-md-2 text-center">
+    VS
+  </div>
+  <div class="col-md-5" style="border: 1px solid red;">
+    <team [team]="game.away"></team>
+  </div>
+</div>

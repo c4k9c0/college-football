@@ -7,6 +7,7 @@ import { GameSelectorComponent } from './components/game-selector/game-selector.
 import { GameComponent } from './components/game/game.component';
 import { TeamComponent } from './components/team/team.component';
 
+import { GamesService } from './services/games/games.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { TeamComponent } from './components/team/team.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [GamesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

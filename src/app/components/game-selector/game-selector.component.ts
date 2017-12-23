@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Team } from '../../classes/Team';
 import { Game } from '../../classes/Game';
 
+import { GamesService } from '../../services/games/games.service';
+
 @Component({
   selector: 'game-selector',
   templateUrl: './game-selector.component.html',
@@ -11,8 +13,12 @@ export class GameSelectorComponent implements OnInit {
 
   games: Game[];
 
-  constructor() {
-    this.games = [new Game(new Team("Texas"), new Team('TAMU'))];
+  constructor(private _gamesService: GamesService) {
+    this.games = _gamesService.getGames();
+  }
+
+  testFn () {
+    this.games[0].home.name += 'test';
   }
 
   ngOnInit() {
