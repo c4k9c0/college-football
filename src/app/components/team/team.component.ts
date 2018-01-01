@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 import { Team } from '../../classes/Team';
 
@@ -9,8 +9,17 @@ import { Team } from '../../classes/Team';
 })
 export class TeamComponent implements OnInit {
 
-  @Input() team: Team;
+  @Input()
+  team: Team;
+
+  @Output()
+  change: EventEmitter<Team> = new EventEmitter<Team>();
+
   constructor() { }
+
+  selectTeam () {
+    this.change.emit(this.team);
+  }
 
   ngOnInit() {
   }

@@ -1,4 +1,4 @@
-<div>
+<div (click)="selectTeam()" style="border: 1px solid green;" class="col-md-12" [ngClass]="{'selected': team.selected}">
   <div class="pull-left">
     {{team.name}}
   </div>

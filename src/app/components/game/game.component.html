@@ -1,11 +1,11 @@
 <div>
   <div class="col-md-5" style="border: 1px solid red;">
-    <team [team]="game.home"></team>
+    <team (change)="selectTeam($event)" [team]="game.home"></team>
   </div>
   <div class="col-md-2 text-center">
     VS
   </div>
   <div class="col-md-5" style="border: 1px solid red;">
-    <team [team]="game.away"></team>
+    <team (change)="selectTeam($event)" [team]="game.away"></team>
   </div>
 </div>
