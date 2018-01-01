@@ -13,14 +13,12 @@ export class GameSelectorComponent implements OnInit {
 
   games: Game[];
 
-  constructor(private _gamesService: GamesService) {
-    this.games = _gamesService.getGames();
-  }
-
-  testFn () {
-    this.games[0].home.name += 'test';
-  }
+  constructor(private _gamesService: GamesService) { }
 
   ngOnInit() {
+    this._gamesService.getGamesHttp().subscribe((things) => {
+      console.log('things: ', things);
+      this.games = things;
+    });
   }
 }

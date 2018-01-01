@@ -8,7 +8,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "startServer": "node ./local-mock-server/app.js"
   },
   "private": true,
   "dependencies": {
@@ -26,7 +27,7 @@
     "core-js": "^2.4.1",
     "jquery": "^3.2.1",
     "lodash": "^4.17.4",
-    "rxjs": "^5.5.2",
+    "rxjs": "^5.5.6",
     "zone.js": "^0.8.14"
   },
   "devDependencies": {
