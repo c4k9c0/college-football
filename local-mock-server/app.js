@@ -26,11 +26,13 @@ app.get('/games', (req, res) => {
     date: '2018-01-01',
     home: {
       name: 'Texas',
-      mascot: 'Longhorns'
+      mascot: 'Longhorns',
+      id: 48
     },
     away: {
       name: 'Texas A&M',
-      mascot: 'Aggies'
+      mascot: 'Aggies',
+      id: 49
     }
   }]);
 });
