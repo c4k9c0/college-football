@@ -8,6 +8,7 @@ import { GameComponent } from './components/game/game.component';
 import { TeamComponent } from './components/team/team.component';
 
 import { GamesService } from './services/games/games.service';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { GamesService } from './services/games/games.service';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [GamesService],
   bootstrap: [AppComponent]
