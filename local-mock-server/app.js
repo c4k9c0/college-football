@@ -1,9 +1,9 @@
 var express = require('express');
 var app = express();
+var games = require('./games/games-endpoint.js');
 const PORT = 3000;
 
 app.use(function (req, res, next) {
-
   // Website you wish to allow to connect
   res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
 
@@ -21,42 +21,8 @@ app.use(function (req, res, next) {
   next();
 });
 
-app.get('/games', (req, res) => {
-  res.json([{
-    date: '2018-01-01',
-    home: {
-      name: 'Texas',
-      mascot: 'Longhorns',
-      id: 48,
-      wins: 3,
-      losses: 1
-    },
-    away: {
-      name: 'Texas A&M',
-      mascot: 'Aggies',
-      id: 49,
-      wins: 2,
-      losses: 2
-    }
-  }, {
-    date: '2018-01-01',
-    home: {
-      name: 'Tulane',
-      mascot: 'Green Wave',
-      id: 60,
-      wins: 4,
-      losses: 0
-    },
-    away: {
-      name: 'Tulsa',
-      mascot: 'Golden Hurricane',
-      id: 61,
-      wins: 1,
-      losses: 3
-    }
-  }]);
-});
+app.use(games);
 
 app.listen(PORT, () => {
-  console.log('Server is up an running on port: ', PORT);
+  console.log('Server is up and running on port: ', PORT);
 });
