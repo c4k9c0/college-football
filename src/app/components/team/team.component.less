@@ -1,3 +1,19 @@
+@import '../../variables.less';
+
 .selected {
-  background-color: green;
+  background-color: @darkGray;
+  border: 1px solid @grayDarker;
+  border-radius: 2px;
+}
+
+.team-wrapper {
+  padding: 3px;
+
+  .team-display {
+    .team-line-two {
+      > * {
+        display: inline;
+      }
+    }
+  }
 }

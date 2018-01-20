@@ -1,6 +1,10 @@
-<div (click)="selectTeam()" style="border: 1px solid green;" class="col-md-12" [ngClass]="{'selected': team.selected}">
-  <div class="pull-left">
-    {{team.name}}
+<div (click)="selectTeam()" class="team-wrapper col-md-12" [ngClass]="{'selected': team.selected}">
+  <div class="team-display pull-left">
+    <h3>{{team.name}}</h3>
+    <div class="team-line-two">
+      <h4>{{team.mascot}}</h4>
+      <p>({{team.wins}} - {{team.losses}})</p>
+    </div>
   </div>
   <div class="pull-right">
     <img src="../../../assets/S-T/{{team.id}}.gif"/>
