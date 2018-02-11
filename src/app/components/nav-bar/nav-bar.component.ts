@@ -9,6 +9,8 @@ export class NavBarComponent implements OnInit {
 
   constructor() { }
 
+  config: Object[];
+
   ngOnInit() {
     this.config = [
       {
@@ -21,5 +23,4 @@ export class NavBarComponent implements OnInit {
       }
     ];
   }
-
 }
