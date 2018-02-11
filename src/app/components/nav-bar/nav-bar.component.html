@@ -1,0 +1,5 @@
+<nav class="navbar navbar-default navbar-fixed-top site-nav">
+  <span *ngFor="let icon of config">
+    <i class="fas fa-3x {{icon.icon}}" [routerLink]="icon.route"></i>
+  </span>
+</nav>

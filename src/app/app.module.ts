@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { GameSelectorComponent } from './components/game-selector/game-selector.component';
 import { GameComponent } from './components/game/game.component';
 import { TeamComponent } from './components/team/team.component';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 
 import { GamesService } from './services/games/games.service';
 import { AppRoutingModule } from './app-routing.module';
@@ -15,7 +16,8 @@ import { AppRoutingModule } from './app-routing.module';
     AppComponent,
     GameSelectorComponent,
     GameComponent,
-    TeamComponent
+    TeamComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
