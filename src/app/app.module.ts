@@ -8,9 +8,11 @@ import { GameComponent } from './components/game/game.component';
 import { TeamComponent } from './components/team/team.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { ScoresComponent } from './components/scores/scores.component';
+import { LoginComponent } from './components/login/login.component'
 
 import { GamesService } from './services/games/games.service';
-import { AppRoutingModule } from './app-routing.module';
+import { LoginGuard } from './guards/login/login-guard.guard';
+import { AppRoutingModule } from './app-routing.module';;
 
 @NgModule({
   declarations: [
@@ -19,14 +21,18 @@ import { AppRoutingModule } from './app-routing.module';
     GameComponent,
     TeamComponent,
     NavBarComponent,
-    ScoresComponent
+    ScoresComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [GamesService],
+  providers: [
+    GamesService,
+    LoginGuard,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
