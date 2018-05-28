@@ -11,8 +11,9 @@ import { ScoresComponent } from './components/scores/scores.component';
 import { LoginComponent } from './components/login/login.component'
 
 import { GamesService } from './services/games/games.service';
+import { AuthenticationService } from './services/authentication/authentication.service';
 import { LoginGuard } from './guards/login/login-guard.guard';
-import { AppRoutingModule } from './app-routing.module';;
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { AppRoutingModule } from './app-routing.module';;
     AppRoutingModule
   ],
   providers: [
+    AuthenticationService,
     GamesService,
     LoginGuard,
   ],
