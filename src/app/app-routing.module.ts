@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { LoginGuard } from './guards/login/login-guard.guard';
+import { GameSelectorComponent } from './games-module/components/game-selector/game-selector.component';
+import { LoginComponent } from './core-module/components/login/login.component';
+import { ScoresComponent } from './scores-module/components/scores/scores.component';
 
-import { GameSelectorComponent } from './components/game-selector/game-selector.component';
-import { LoginComponent } from './components/login/login.component';
-import { ScoresComponent } from './components/scores/scores.component';
+import { LoginGuard } from './core-module/guards/login/login-guard.guard';
 
+// TODO Allow module to do their own routing
 const routes: Routes = [
   {
     canActivate: [LoginGuard],
