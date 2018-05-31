@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { GamesRoutingModule } from './games-routing.module';
 
 import { GameSelectorComponent } from './components/game-selector/game-selector.component';
 import { GameComponent } from './components/game/game.component';
@@ -15,7 +16,8 @@ export const COMPONENTS = [
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    GamesRoutingModule
   ],
   declarations: COMPONENTS,
   exports: COMPONENTS,
