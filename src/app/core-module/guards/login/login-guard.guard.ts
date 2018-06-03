@@ -10,7 +10,7 @@ export class LoginGuard implements CanActivate {
     if (localStorage.getItem('userToken')) {
       return true;
     } else {
-      this.router.navigate(['/login']);
+      this.router.navigate(['/login'], { queryParams: { redirect: state.url } });
       return false;
     }
   }
