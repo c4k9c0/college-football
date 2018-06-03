@@ -1,13 +1,13 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
-import { Team } from '../../classes/Team';
+import { Team } from '../../model/Team';
 
 @Component({
   selector: 'team',
   templateUrl: './team.component.html',
   styleUrls: ['./team.component.less']
 })
-export class TeamComponent implements OnInit {
+export class TeamComponent {
 
   @Input()
   team: Team;
@@ -20,8 +20,4 @@ export class TeamComponent implements OnInit {
   selectTeam () {
     this.change.emit(this.team);
   }
-
-  ngOnInit() {
-  }
-
 }

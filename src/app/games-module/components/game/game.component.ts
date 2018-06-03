@@ -1,14 +1,15 @@
 import * as _ from "lodash";
-import { Component, OnInit, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, Input } from '@angular/core';
 
-import { Game } from '../../classes/Game';
+import { Game } from '../../model/Game';
 
 @Component({
   selector: 'game',
   templateUrl: './game.component.html',
-  styleUrls: ['./game.component.less']
+  styleUrls: ['./game.component.less'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class GameComponent implements OnInit {
+export class GameComponent {
 
   @Input() game: Game;
   constructor() { }
@@ -18,8 +19,4 @@ export class GameComponent implements OnInit {
     selectedTeam.selected = true;
     otherTeam.selected = false;
   }
-
-  ngOnInit() {
-  }
-
 }
